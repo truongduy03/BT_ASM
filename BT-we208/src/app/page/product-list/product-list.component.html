@@ -1,0 +1,22 @@
+<div class="container">
+    <h1>Quan ly san pham</h1>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Stt</th>
+                <th>Img</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Chuc nang</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr app-product-item
+            *ngFor="let product of products; let i = index"
+            [product]="product"
+            [index]="i"
+            (onRemove) = "removeItem(product.id)"
+            ></tr>
+        </tbody>
+    </table>
+</div>
